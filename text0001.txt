@@ -1,0 +1,40 @@
+{ // Register Doctor
+
+    curl -X POST http://localhost:5000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John X",
+    "email": "doctor@gmail.com",
+    "password": "doctor",
+    "role": "doctor"
+  }'
+
+}
+{ // Register Patient
+
+    curl -X POST http://localhost:5000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Y",
+    "email": "user@gmail.com",
+    "password": "user",
+    "role": "patient"
+  }'
+
+}
+{ // Login
+
+    curl -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "doctor@gmail.com",
+    "password": "doctor"
+  }'
+
+}
+
+cd online-doctor-system
+cd backend
+cd frontend
+
+frontend/src/.js
