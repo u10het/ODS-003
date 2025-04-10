@@ -1,7 +1,7 @@
 const Appointment = require("../models/Appointment");
 const Availability = require("../models/Availability");
 
-const getDoctorDashboard = async (req, res) => {
+const getDashboard = async (req, res) => {
   try {
     const appointments = await Appointment.find({ doctor: req.user._id }).populate("patient", "name email");
     const availability = await Availability.find({ doctor: req.user._id });
@@ -34,7 +34,10 @@ const getDoctorProfile = (req, res) => {
 };
 
 module.exports = {
-  getDoctorDashboard,
+  getDashboard,
   setAvailability,
-  getDoctorProfile
+  getDoctorProfile,
+  getAppointments: (req, res) => {
+    res.status(200).json({ msg: "Dummy appointment list (to be implemented)" });
+  },
 };

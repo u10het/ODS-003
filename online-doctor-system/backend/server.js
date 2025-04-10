@@ -8,7 +8,10 @@ const patientRoutes = require("./routes/patientRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const cors = require("cors");
 
-dotenv.config();
+require('dotenv').config()
+console.log("JWT_SECRET at startup:", process.env.JWT_SECRET);
+
+
 connectDB();
 
 const app = express();
