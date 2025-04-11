@@ -16,9 +16,9 @@
   -H "Content-Type: application/json" \
   -d '{
     "name": "John Y",
-    "email": "user@gmail.com",
-    "password": "user",
-    "role": "patient"
+    "email": "user@y",
+    "password": "usery",
+    "role": "Patient"
   }'
 
 }
@@ -27,15 +27,15 @@
     curl -X POST http://localhost:5000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "admin@a",
-    "password": "admina"
+    "email": "admin@y",
+    "password": "adminy"
   }'
 
 }
 
 {
   curl -X GET http://localhost:5000/api/admin/dashboard \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjdjYTc3OWY0YmRjMjJlMzUyNTliZiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc0NDI5NTkzMywiZXhwIjoxNzQ0Mjk5NTMzfQ.B15XGFWi1t2jzDfVDydh_k0F7kOzlNCjNpVSICooTgU"
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Zjg5NWI2NjNhZWMyODBjYTI2ZmFkMiIsInJvbGUiOiJQYXRpZW50IiwiaWF0IjoxNzQ0MzQ0NTMzLCJleHAiOjE3NDQzNDgxMzN9.cfzKk8HSfGCxCplTCt3FI6zw0288TIHLnafJSc4ncbU"
 
 }
 

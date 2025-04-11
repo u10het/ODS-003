@@ -7,6 +7,10 @@ const doctorRoutes = require("./routes/doctorRoutes");
 const patientRoutes = require("./routes/patientRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const cors = require("cors");
+const availabilityRoutes = require("./routes/availabilityRoutes");
+const appointmentRoutes = require("./routes/appointmentRoutes");
+const cardRoutes = require("./routes/cardRoutes");
+
 
 require('dotenv').config()
 console.log("JWT_SECRET at startup:", process.env.JWT_SECRET);
@@ -18,10 +22,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 app.use("/api/auth", authRoutes);
 app.use("/api/doctor", doctorRoutes);
 app.use("/api/patient", patientRoutes);
 app.use("/api/admin", adminRoutes);
+
+app.use('/api/availability', availabilityRoutes);
+app.use('/api/appointments', appointmentRoutes);
+app.use('/api/cards', cardRoutes);
 
 app.get("/", (req, res) => res.send("Online Doctor System API"));
 
